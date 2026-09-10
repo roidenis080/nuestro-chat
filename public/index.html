@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestro pequeño espacio ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="welcome" class="card">
+      <div class="heart">♥</div>
+      <h1>Nuestro pequeño espacio</h1>
+      <p>Un lugar privado solo para nosotros dos 💕</p>
+
+      <label>Tu nombre</label>
+      <input id="name" maxlength="30" placeholder="Escribe tu nombre">
+
+      <button id="create">Crear nuestro chat ❤️</button>
+
+      <div class="divider"><span>o</span></div>
+
+      <label>Código de chat</label>
+      <input id="code" maxlength="6" placeholder="Ej. A7K92B">
+      <button id="join" class="secondary">Unirme al chat</button>
+
+      <small id="error"></small>
+    </section>
+
+    <section id="chat" class="chat hidden">
+      <header>
+        <div>
+          <h2>❤️ Nosotros</h2>
+          <span id="status">Esperando a la otra persona...</span>
+        </div>
+        <button id="copy" class="icon">🔗</button>
+      </header>
+
+      <div id="codeBox" class="codebox hidden">
+        Comparte este código: <strong id="chatCode"></strong>
+      </div>
+
+      <div id="messages" class="messages"></div>
+      <div id="typing"></div>
+
+      <form id="form">
+        <input id="message" autocomplete="off" placeholder="Escribe un mensaje...">
+        <button>❤️</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
